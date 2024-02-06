@@ -14,12 +14,12 @@ class GrammarStats:
         if len(text) < 1:
             raise Exception("Must provide a text for validity check")
         elif text[0].isupper() and text[-1] in self.ending_punctuation:
+            self.tried += 1
+            self.valid += 1
             return True
         else:
+            self.tried += 1
             return False
 
     def percentage_good(self):
-        # Returns:
-        #   int: the percentage of texts checked so far that passed the check
-        #        defined in the `check` method. The number 55 represents 55%.
-        pass
+        return int((self.valid / self.tried) * 100)
