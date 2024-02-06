@@ -1,6 +1,6 @@
 class GrammarStats:
     def __init__(self):
-        self.ending_punctuation = ['.!?']
+        self.ending_punctuation = ['.', '!', '?']
         self.tried = 0
         self.valid = 0
         pass

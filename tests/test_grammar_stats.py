@@ -8,7 +8,8 @@ return true
 
 def test_string_with_capital_letter_and_valid_punctuation():
     sentence = GrammarStats()
-    assert sentence.check("Hello world!") == True
+    result = sentence.check("Hello world!")
+    assert result == True
 
 """
 Given a string starting with capital letter and no ending with valid punctuation
